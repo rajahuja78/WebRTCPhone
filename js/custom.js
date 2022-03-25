@@ -288,7 +288,7 @@ $("#status").click(function() {
 
 			session.on("progress", () => {
 				clearInterval(watchStatus);
-				//playSong("sounds/ringing.mp3", true);
+				playSong("sounds/ringing.mp3", true);
 				$("#status").html("Ringing...");
 			});
 
