@@ -77,27 +77,27 @@ pc.onicecandidate = function(ice)
 		if ($('#host').val()=='10.18.0.132') {
 			$('#port').val('8089');
 			$('#sip-port').val('5060');
-			$('#number').val('sip:111@10.18.0.132:5060');
+			$('#number').val('777');
 		}
 		else if($('#host').val()=='10.18.0.129') {
 			$('#port').val('8089');
 			$('#sip-port').val('5060');
-			$('#number').val('sip:111@10.18.0.129:5060');			
+			$('#number').val('777');			
 		}
 		else if($('#host').val()=='10.18.0.57') {
                         $('#port').val('8089');
                         $('#sip-port').val('5060');
-                        $('#number').val('sip:111@10.18.0.57:5060');
+                        $('#number').val('sip:777');
                 }
 		else if($('#host').val()=='10.18.0.63') {
                         $('#port').val('8087');
                         $('#sip-port').val('5060');
-                        $('#number').val('sip:111@10.18.0.63:5060');
+                        $('#number').val('777');
                 }
 		else {
-			$('#port').val('4443');
-			$('#sip-port').val('');
-			$('#number').val('sip:9560700235@sip.antisip.com');		}
+			$('#port').val('8089');
+			$('#sip-port').val('5060');
+			$('#number').val('777');		}
 	})
 
 
@@ -243,7 +243,7 @@ $("#status").click(function() {
 			"sockets"			: [ socket ],
 			"uri"      			: peer,
 			"contact_uri"			: peer,
-			"password"			: secret,
+			"password"			: secret
 			//"register_expires"	: 180
 		};
 
