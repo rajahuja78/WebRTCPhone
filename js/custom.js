@@ -481,7 +481,8 @@ $("#status").click(function() {
 					closeOnEsc: false,
 					closeOnClickOutside: false,
 					title: "Incoming call",
-					text: "from: " + session.remote_identity.display_name,
+					text: "from: " + session.remote_identity.display_name + session.remote_identity.uri,
+					
 					icon: "info",
 					buttons: {
 						cancel: "Reject",
