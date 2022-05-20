@@ -491,14 +491,14 @@ $("#status").click(function() {
 							value: "true"
 						},
 					},
-				})
-				.then(function(value) {*/
+				})*/
+				//.then(function(value) {
 					if (true) {
 						session.answer(callOptions);
 					} else {
 						session.terminate();
 					}
-				});
+				//});
 	        }
 		});
 
