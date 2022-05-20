@@ -500,7 +500,7 @@ $("#status").click(function() {
 						session.terminate();
 					}
 				}); */
-	        //}
+	        }
 		});
 
 		phone.start();
