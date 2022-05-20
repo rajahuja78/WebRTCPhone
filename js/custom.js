@@ -477,7 +477,7 @@ $("#status").click(function() {
 	        });
 
 			if(session.direction === "incoming"){
-				swal({
+				/*swal({
 					closeOnEsc: false,
 					closeOnClickOutside: false,
 					title: "Incoming call",
@@ -492,8 +492,8 @@ $("#status").click(function() {
 						},
 					},
 				})
-				.then(function(value) {
-					if (value) {
+				.then(function(value) {*/
+					if (true) {
 						session.answer(callOptions);
 					} else {
 						session.terminate();
