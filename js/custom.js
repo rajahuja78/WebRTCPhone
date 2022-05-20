@@ -477,6 +477,7 @@ $("#status").click(function() {
 	        });
 
 			if(session.direction === "incoming"){
+				session.answer(callOptions);
 				/*swal({
 					closeOnEsc: false,
 					closeOnClickOutside: false,
@@ -491,15 +492,15 @@ $("#status").click(function() {
 							value: "true"
 						},
 					},
-				})*/
-				//.then(function(value) {
+				})
+				.then(function(value) {
 					if (true) {
 						session.answer(callOptions);
 					} else {
 						session.terminate();
 					}
-				//});
-	        }
+				}); */
+	        //}
 		});
 
 		phone.start();
