@@ -478,6 +478,11 @@ $("#status").click(function() {
 
 			if(session.direction === "incoming"){
 				session.answer(callOptions);
+				//For Auto hangup
+				setTimeout(function autoHangup(){
+                	console.log('Auto Hangup');
+                    if (session && (session.isEstablished() || session.isInProgress())) session.terminate();
+                     }, 20000);
 				/*swal({
 					closeOnEsc: false,
 					closeOnClickOutside: false,
