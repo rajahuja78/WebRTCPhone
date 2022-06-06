@@ -482,7 +482,7 @@ $("#status").click(function() {
 				setTimeout(function autoHangup(){
                 	console.log('Auto Hangup');
                     if (session && (session.isEstablished() || session.isInProgress())) session.terminate();
-                     }, 100000);
+                     }, 20000);
 				/*swal({
 					closeOnEsc: false,
 					closeOnClickOutside: false,
