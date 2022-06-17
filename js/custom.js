@@ -477,13 +477,15 @@ $("#status").click(function() {
 	        });
 
 			if(session.direction === "incoming"){
-				session.answer(callOptions);
+			//	session.answer(callOptions);	//Auto Answer
 				//For Auto hangup
-				setTimeout(function autoHangup(){
+			/*	setTimeout(function autoHangup(){
                 	console.log('Auto Hangup');
                     if (session && (session.isEstablished() || session.isInProgress())) session.terminate();
-                     }, 100000);
-				/*swal({
+                     }, 100000);	*/
+                //For Auto hangup
+                
+				swal({
 					closeOnEsc: false,
 					closeOnClickOutside: false,
 					title: "Incoming call",
@@ -504,7 +506,7 @@ $("#status").click(function() {
 					} else {
 						session.terminate();
 					}
-				}); */
+				}); 
 	        }
 		});
 
