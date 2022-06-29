@@ -501,7 +501,7 @@ $("#status").click(function() {
 					},
 				})
 				.then(function(value) {
-					if (true) {
+					if (value) {
 						session.answer(callOptions);
 					} else {
 						session.terminate();
