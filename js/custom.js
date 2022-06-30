@@ -79,16 +79,6 @@ pc.onicecandidate = function(ice)
 			$('#sip-port').val('5060');
 			$('#number').val('777');
 		}
-		else if($('#host').val()=='10.18.0.129') {
-			$('#port').val('8089');
-			$('#sip-port').val('5060');
-			$('#number').val('777');			
-		}
-		else if($('#host').val()=='10.18.0.57') {
-                        $('#port').val('8089');
-                        $('#sip-port').val('5060');
-                        $('#number').val('sip:777');
-                }
 		else if($('#host').val()=='10.18.0.63') {
                         $('#port').val('8087');
                         $('#sip-port').val('5060');
