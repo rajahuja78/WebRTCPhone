@@ -338,7 +338,8 @@ $("#status").click(function() {
 							        console.log('1', parts[1]);
 							        console.log('2', parts[2]);*/
 							        console.log('parts.length', parts.length);
-							        var sdpPort = Math.floor(Math.random() * (65534 - 7078 + 1) + 7078);
+							        //var sdpPort = Math.floor(Math.random() * (65534 - 7078 + 1) + 7078);
+							        var sdpPort = Math.floor(Math.random() * (6020 - 6000 + 1) + 6000);
 
 							        var tmpStr = parts[0] + " " + sdpPort;
 						        	for (var i=2; i<parts.length; i++) {
