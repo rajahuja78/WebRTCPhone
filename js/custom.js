@@ -3,7 +3,8 @@
 //
 var localIP; 
 //var gatewayIP = '172.16.95.1';
-var gatewayIP = '10.0.247.1';
+//var gatewayIP = '10.0.247.1';
+gatewayIP = '103.115.212.2';
 let phone;
 let session;
 let watchStatus;
