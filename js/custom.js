@@ -228,7 +228,8 @@ $("#status").click(function() {
 		//let peer = "sip:9560700235@sip.antisip.com";
 
 		//let socket = new JsSIP.WebSocketInterface("wss://" + host + ":" + port);
-		let socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
+	//	let socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
+		let socket = new JsSIP.WebSocketInterface(ws_protocol+"://webrtc-network.one97.delhi.net:" + port + "/ws");	// Using Domain
 		//let socket = new JsSIP.WebSocketInterface("wss://sip.antisip.com:4443");
 		//socket.via_transport = "udp";
 
@@ -297,7 +298,8 @@ $("#status").click(function() {
 				console.log('*************************************************************************************');
    				console.log('#################### originator : '+evt.originator+' ####################');
    				console.log('#################### type : '+evt.type+' ####################');
-   				//console.log(evt.sdp);
+				console.log('********************************* BEFORE MODIFYING SDP **********************************');
+   				console.log(evt.sdp);
    				var myOffer = evt.sdp;
 
    				let tmpArray=[];
@@ -442,6 +444,8 @@ $("#status").click(function() {
 
 					//console.log('finalSDP : '+finalSDP);
 					evt.sdp = finalSDP;
+					console.log('********************************* AFTER MODIFYING SDP **********************************');
+					console.log(evt.sdp);
 				}
 					
 
