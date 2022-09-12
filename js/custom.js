@@ -228,14 +228,8 @@ $("#status").click(function() {
 		//let peer = "sip:9560700235@sip.antisip.com";
 
 		//let socket = new JsSIP.WebSocketInterface("wss://" + host + ":" + port);
-		if(host=="10.18.0.132")
-		{
-			let socket = new JsSIP.WebSocketInterface(ws_protocol+"://webrtc-network.one97.delhi.net:" + port + "/ws");	// Using Domain
-		}
-		else{
-			let socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
-		}
-
+	//	let socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
+		let socket = new JsSIP.WebSocketInterface(ws_protocol+"://webrtc-network.one97.delhi.net:" + port + "/ws");	// Using Domain
 		//let socket = new JsSIP.WebSocketInterface("wss://sip.antisip.com:4443");
 		//socket.via_transport = "udp";
 
