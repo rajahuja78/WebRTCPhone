@@ -228,7 +228,17 @@ $("#status").click(function() {
 		//let peer = "sip:9560700235@sip.antisip.com";
 
 		//let socket = new JsSIP.WebSocketInterface("wss://" + host + ":" + port);
-		let socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
+		if ($('#host').val()=='10.18.0.132'){
+			let socket = new JsSIP.WebSocketInterface(ws_protocol+"://webrtc-network.one97.delhi.net:" + port + "/ws");	// Using 132 Domain
+		}
+		else if ($('#host').val()=='10.200.238.6') {
+			let socket = new JsSIP.WebSocketInterface(ws_protocol+"obd.srilanka.airtel.itm" + "/ws");	// Using sri lanka Domain
+		}
+
+		else
+		{	
+			let socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
+		}
 		//let socket = new JsSIP.WebSocketInterface("wss://sip.antisip.com:4443");
 		//socket.via_transport = "udp";
 
