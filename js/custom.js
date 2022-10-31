@@ -230,7 +230,8 @@ $("#status").click(function() {
 		//let socket = new JsSIP.WebSocketInterface("wss://" + host + ":" + port);
 		var socket;
 		if ($('#host').val()=='10.18.0.132'){
-			socket = new JsSIP.WebSocketInterface(ws_protocol+"://webrtc-network.one97.delhi.net:" + port + "/ws");	// Using 132 Domain
+			//socket = new JsSIP.WebSocketInterface(ws_protocol+"://webrtc-network.one97.delhi.net:" + port + "/ws");	// Using 132 Domain
+			socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
 		}
 		else if ($('#host').val()=='10.200.238.6') {
 			socket = new JsSIP.WebSocketInterface(ws_protocol+":obd.srilanka.airtel.itm" + "/ws");	// Using sri lanka Domain
