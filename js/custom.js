@@ -249,7 +249,12 @@ $("#status").click(function() {
 			"uri"      			: peer,
 			"contact_uri"			: peer,
 			"password"			: secret,
-			"register_expires"	: 36000
+			"register"			: true,
+			"register_expires"	: 36000,
+			"connection_recovery_max_interval"	: 60,
+			"session_timers"	: true,
+			"session_timers_refresh_method"	: 'invite',
+			"session_timers_force_refresher": true
 		};
 
 		JsSIP.debug.enable("JsSIP:*");
