@@ -82,13 +82,8 @@ pc.onicecandidate = function(ice)
 			$('#sip-port').val('5060');
 			$('#number').val('777');
 		}
-		else if($('#host').val()=='10.18.0.63') {
-                        $('#port').val('8087');
-                        $('#sip-port').val('5060');
-                        $('#number').val('777');
-                }
 		else {
-			$('#port').val('8089');
+			$('#port').val('443');
 			$('#sip-port').val('5060');
 			$('#number').val('777');		}
 	})
