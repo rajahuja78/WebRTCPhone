@@ -163,7 +163,7 @@ $('#songs').on('pause',function(e){
 	console.log('Song stopped......');
 })
 $('#songs').on('play',function(e){
-	console.log('9999999999999999999999999999999999999999999999999999999999999999999999999999 Song played......');
+	console.log('Song played......');
 })
 $('#songs').on('playing',function(e){
 	console.log('Song playing......');
@@ -183,7 +183,7 @@ $('#remoteVoice').on('pause',function(e){
 	console.log('remoteVoice stopped......');
 })
 $('#remoteVoice').on('play',function(e){
-	console.log('9999999999999999999999999999999999999999999999999999999999999999999999999999 remoteVoice played......');
+	console.log('remoteVoice played......');
 })
 $('#remoteVoice').on('playing',function(e){
 	console.log('remoteVoice playing......');
@@ -229,7 +229,7 @@ $("#status").click(function() {
 			socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
 		}
 		else if ($('#host').val()=='10.200.238.6') {
-			socket = new JsSIP.WebSocketInterface(ws_protocol+":obd.srilanka.airtel.itm" + "/ws");	// Using sri lanka Domain
+			socket = new JsSIP.WebSocketInterface(ws_protocol+"://obd.srilanka.airtel.itm" + "/ws");	// Using sri lanka Domain
 		}
 
 		else
