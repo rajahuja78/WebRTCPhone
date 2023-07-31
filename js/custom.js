@@ -229,7 +229,7 @@ $("#status").click(function() {
 			socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
 		}
 		else($('#host').val()=='10.0.151.22'){
-			socket = new JsSIP.WebSocketInterface(ws_protocol+"stage-asterisk.tocom.cloud/asterisk/ws");	// Using 22 Domain
+			socket = new JsSIP.WebSocketInterface(ws_protocol+"://stage-asterisk.tocom.cloud/asterisk/ws");	// Using 22 Domain
 		}
 		else if ($('#host').val()=='10.200.238.6') {
 			socket = new JsSIP.WebSocketInterface(ws_protocol+"://obd.srilanka.airtel.itm" + "/ws");	// Using sri lanka Domain
