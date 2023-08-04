@@ -69,8 +69,7 @@ pc.onicecandidate = function(ice)
  if (ice && ice.candidate && ice.candidate.candidate)
  {
   localIP = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/.exec(ice.candidate.candidate)[1];
-	//localIP = "106.196.62.231";
-  console.log('my IP: ', localIP);
+  console.log('my local IP: ', localIP);
  }
 };
 	
@@ -220,10 +219,8 @@ $("#status").click(function() {
 			console.log('2 peer = '+peer);
 		}
 
-		//let peer = "sip:9560700235@sip.antisip.com";
-
-		//let socket = new JsSIP.WebSocketInterface("wss://" + host + ":" + port);
 		var socket;
+		/*
 		if ($('#host').val()=='10.18.0.132'){
 			//socket = new JsSIP.WebSocketInterface(ws_protocol+"://webrtc-network.one97.delhi.net:" + port + "/ws");	// Using 132 Domain
 			socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
@@ -236,15 +233,15 @@ $("#status").click(function() {
 		}
 		else
 		{	
-			socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + ":" + port + "/ws");
-		}
-		//let socket = new JsSIP.WebSocketInterface("wss://sip.antisip.com:4443");
+			*/
+			socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + port + "/ws");
+		//}
 		//socket.via_transport = "udp";
 
 		let regOptions = {
 			"sockets"			: [ socket ],
 			"uri"      			: peer,
-			"contact_uri"			: peer,
+			"contact_uri"		: peer,
 			"password"			: secret,
 			"register"			: true,
 			"register_expires"	: 36000,
@@ -285,14 +282,6 @@ $("#status").click(function() {
 					console.log('##########################################################################################################################');
 			});
 
-/*
-			session.on('peerconnection', function(data) {
-					console.log('##########################################################################################################################');
-					console.log('										peerconnection CREATED											');
-					console.log('##########################################################################################################################');
-			});*/
-
-
 			session.on("progress", () => {
 				clearInterval(watchStatus);
 				//playSong("sounds/ringing.mp3", true);
@@ -311,7 +300,7 @@ $("#status").click(function() {
 				console.log('*************************************************************************************');
    				console.log('#################### originator : '+evt.originator+' ####################');
    				console.log('#################### type : '+evt.type+' ####################');
-   				//console.log(evt.sdp);
+
    				var myOffer = evt.sdp;
 
    				let tmpArray=[];
