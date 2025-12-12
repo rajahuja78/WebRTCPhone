@@ -205,6 +205,7 @@ $("#status").click(function() {
 		let sipPort = $("#sip-port").val();
 		console.log('sipPort = '+sipPort);
 		let peer;
+		let contact_peer;
 		var selfHost = host;
 		var ws_protocol = $('#ws-protocol').val();
 		if($('#from-ip').val()!='Default') {
@@ -212,7 +213,8 @@ $("#status").click(function() {
 		}
 		
 		if(sipPort!='') {
-			 peer = "sip:" + user + "@" + selfHost + ":" + sipPort;
+			peer = "sip:" + user + "@" + selfHost + ":" + sipPort;
+			contact_peer = "sip:" + user + "@" + selfHost;
 			console.log('1 peer = '+peer);
 		}else {
 			 peer = "sip:" + user + "@" + selfHost;
@@ -237,7 +239,7 @@ $("#status").click(function() {
 			socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + port + "/ws");
 		//}
 		//socket.via_transport = "udp";
-		let contact = peer + ';transport=wss';
+		let contact = contact_peer + ';transport=wss';
 		let regOptions = {
 			"sockets"			: [ socket ],
 			"uri"      			: peer,
