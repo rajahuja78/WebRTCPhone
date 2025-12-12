@@ -237,11 +237,11 @@ $("#status").click(function() {
 			socket = new JsSIP.WebSocketInterface(ws_protocol+"://" + host + port + "/ws");
 		//}
 		//socket.via_transport = "udp";
-
+		let contact = peer + ';transport=wss';
 		let regOptions = {
 			"sockets"			: [ socket ],
 			"uri"      			: peer,
-			"contact_uri"		: peer,
+			"contact_uri"		: contact,
 			"password"			: secret,
 			"register"			: true,
 			"register_expires"	: 36000,
